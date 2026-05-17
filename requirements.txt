@@ -3,6 +3,7 @@ django-jazzmin
 scikit-learn
 pandas
 numpy
+scipy
 matplotlib
 seaborn
 openpyxl
