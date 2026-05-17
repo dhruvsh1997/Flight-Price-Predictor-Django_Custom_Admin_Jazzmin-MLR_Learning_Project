@@ -1,4 +1,104 @@
-/ml_models/flight_price_model.pkl
-/dataset/Clean_Dataset.xlsx
+# Byte-compiled / Python artifacts
+pycache/
+*.py[cod]
+*$py.class
 
+# Virtual environment
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+pytest_cache/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+db.sqlite3
+media/
+staticfiles/
+
+# If using local settings file (not in repo*
+local_settings.py
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+.env.test
+.env.production
+.env.development
+.env.example       # keep example in repo? remove this line if you want to track .env.example
+
+# Sensitive files
+*.pem
+*.key
+
+# VS Code
+.vscode/
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+Linux
+*~
+
+# Logs directory (explicit for this project*
+logs/
+logs/*.log
+
+# Dataset and model files (do NOT commit large data/model files)
+dataset/
+dataset/*
+!dataset/.gitkeep
+
+ml_models/
+ml_models/*
+!ml_models/.gitkeep
+
+# Pickle files (models)
+*.pkl
+*.joblib
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Pyre type checker
+.pyre/
+
+# Optional: JetBrains
+.idea/
+
+# Optional: celerybeat
+celerybeat-schedule
