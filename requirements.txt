@@ -1,0 +1,11 @@
+Django
+django-jazzmin
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+openpyxl
+joblib
+python-dotenv
+Pillow

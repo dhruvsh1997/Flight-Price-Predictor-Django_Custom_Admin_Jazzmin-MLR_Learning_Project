@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}FlightML — Home{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero ────────────────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container text-center">
+    <h1><i class="bi bi-airplane-engines-fill me-2"></i>Flight Price Predictor</h1>
+    <p class="mt-2 mb-4">
+      Multiple Linear Regression on 300K+ EaseMyTrip bookings across India's top 6 metro cities.
+    </p>
+    <a href="{% url 'predictor:predict' %}" class="btn-predict px-5">
+      <i class="bi bi-search me-2"></i>Predict a Price
+    </a>
+  </div>
+</section>
+
+<div class="container pb-5">
+
+  <!-- ── Summary Stats ─────────────────────────────────────────────────────── -->
+  <div class="row g-3 mb-4">
+    {% with s=summary %}
+    <div class="col-6 col-md-3">
+      <div class="stat-pill d-flex align-items-center justify-content-between">
+        <div>
+          <div class="stat-val">{{ s.total_records|default:"0"|stringformat:"d" }}</div>
+          <div class="stat-lbl">Total Records</div>
+        </div>
+        <i class="bi bi-database-fill stat-icon text-primary"></i>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-pill d-flex align-items-center justify-content-between">
+        <div>
+          <div class="stat-val" style="color:var(--mint)">₹{{ s.avg_price|floatformat:0 }}</div>
+          <div class="stat-lbl">Avg Price</div>
+        </div>
+        <i class="bi bi-graph-up stat-icon text-success"></i>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-pill d-flex align-items-center justify-content-between">
+        <div>
+          <div class="stat-val" style="color:var(--cobalt)">₹{{ s.min_price }}</div>
+          <div class="stat-lbl">Min Price</div>
+        </div>
+        <i class="bi bi-arrow-down-circle-fill stat-icon"></i>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-pill d-flex align-items-center justify-content-between">
+        <div>
+          <div class="stat-val" style="color:var(--rose)">₹{{ s.max_price }}</div>
+          <div class="stat-lbl">Max Price</div>
+        </div>
+        <i class="bi bi-arrow-up-circle-fill stat-icon text-danger"></i>
+      </div>
+    </div>
+    {% endwith %}
+  </div>
+
+  <!-- ── Charts Row 1 ──────────────────────────────────────────────────────── -->
+  <div class="section-heading"><i class="bi bi-pie-chart-fill text-primary"></i> Dataset Overview</div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-8">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-building"></i> Average Price by Airline</div>
+        <canvas id="chartAirline"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="chart-wrap h-100">
+        <div class="chart-title"><i class="bi bi-chair"></i> Price by Class</div>
+        <canvas id="chartClass"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Charts Row 2 ──────────────────────────────────────────────────────── -->
+  <div class="row g-3 mb-5">
+    <div class="col-lg-4">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-map"></i> Price by Stops</div>
+        <canvas id="chartStops"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-calendar3"></i> Avg Price vs Days Left to Departure</div>
+        <canvas id="chartDays"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────────── -->
+  <div class="card-glass p-4 text-center">
+    <h4 class="mb-2" style="font-family:'Sora',sans-serif;font-weight:700">Ready to predict?</h4>
+    <p class="text-muted mb-3">Select your airline, route, class and travel details to get an ML-powered price estimate.</p>
+    <a href="{% url 'predictor:predict' %}" class="btn-predict">
+      <i class="bi bi-airplane-fill me-2"></i>Open Predictor
+    </a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const PALETTE = ['#1446A0','#3A86FF','#00C9A7','#FFB703','#EF476F','#8338EC'];
+
+function makeChart(id, type, labels, data, label, opts={}) {
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  return new Chart(ctx, {
+    type,
+    data: {
+      labels,
+      datasets: [{
+        label,
+        data,
+        backgroundColor: type === 'doughnut'
+          ? PALETTE
+          : PALETTE.map(c => c + 'CC'),
+        borderColor: type === 'line' ? '#3A86FF' : '#fff',
+        borderWidth: type === 'doughnut' ? 3 : 1,
+        fill: type === 'line',
+        tension: 0.4,
+        pointRadius: 0,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { legend: { display: type === 'doughnut' }, tooltip: { callbacks: {
+        label: ctx => ' ₹' + Number(ctx.parsed.y ?? ctx.parsed).toLocaleString('en-IN', {maximumFractionDigits:0})
+      }}},
+      scales: type !== 'doughnut' ? {
+        y: { ticks: { callback: v => '₹' + Number(v).toLocaleString('en-IN') }, grid: { color: '#e2e8f0' } },
+        x: { grid: { display: false } }
+      } : {},
+      ...opts,
+    }
+  });
+}
+
+const airline = {{ chart_airline|safe }};
+const cls     = {{ chart_class|safe }};
+const stops   = {{ chart_stops|safe }};
+const days    = {{ chart_days|safe }};
+
+makeChart('chartAirline', 'bar',     airline.labels, airline.values, 'Avg Price (₹)');
+makeChart('chartClass',   'doughnut', cls.labels,     cls.values,     'Avg Price (₹)');
+makeChart('chartStops',   'bar',      stops.labels,   stops.values,   'Avg Price (₹)');
+makeChart('chartDays',    'line',     days.labels,    days.values,    'Avg Price (₹)');
+</script>
+{% endblock %}

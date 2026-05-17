@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}Predict Flight Price — FlightML{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container text-center">
+    <h1><i class="bi bi-search me-2"></i>Predict Flight Price</h1>
+    <p>Fill in the booking details below and let the MLR model estimate your fare.</p>
+  </div>
+</section>
+
+<div class="container pb-5" style="max-width: 860px;">
+
+  <!-- Form card -->
+  <div class="card-glass p-4 p-md-5">
+    <form method="post" id="predictForm" novalidate>
+      {% csrf_token %}
+
+      <!-- ── Row 1: Route ─────────────────────────────────────────── -->
+      <div class="section-heading"><i class="bi bi-geo-alt-fill text-primary"></i> Route</div>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <label class="form-label">{{ form.airline.label }}</label>
+          {{ form.airline }}
+          {% if form.airline.errors %}<div class="text-danger small mt-1">{{ form.airline.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.source_city.label }}</label>
+          {{ form.source_city }}
+          {% if form.source_city.errors %}<div class="text-danger small mt-1">{{ form.source_city.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.destination_city.label }}</label>
+          {{ form.destination_city }}
+          {% if form.destination_city.errors %}<div class="text-danger small mt-1">{{ form.destination_city.errors.0 }}</div>{% endif %}
+        </div>
+      </div>
+
+      <!-- ── Row 2: Schedule ──────────────────────────────────────── -->
+      <div class="section-heading"><i class="bi bi-clock-fill text-primary"></i> Schedule</div>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <label class="form-label">{{ form.departure_time.label }}</label>
+          {{ form.departure_time }}
+          {% if form.departure_time.errors %}<div class="text-danger small mt-1">{{ form.departure_time.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.arrival_time.label }}</label>
+          {{ form.arrival_time }}
+          {% if form.arrival_time.errors %}<div class="text-danger small mt-1">{{ form.arrival_time.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.stops.label }}</label>
+          {{ form.stops }}
+          {% if form.stops.errors %}<div class="text-danger small mt-1">{{ form.stops.errors.0 }}</div>{% endif %}
+        </div>
+      </div>
+
+      <!-- ── Row 3: Booking Details ───────────────────────────────── -->
+      <div class="section-heading"><i class="bi bi-ticket-perforated-fill text-primary"></i> Booking Details</div>
+      <div class="row g-3 mb-5">
+        <div class="col-md-4">
+          <label class="form-label">{{ form.flight_class.label }}</label>
+          {{ form.flight_class }}
+          {% if form.flight_class.errors %}<div class="text-danger small mt-1">{{ form.flight_class.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.duration.label }}</label>
+          {{ form.duration }}
+          <div class="text-muted" style="font-size:0.78rem;margin-top:0.25rem">{{ form.duration.help_text }}</div>
+          {% if form.duration.errors %}<div class="text-danger small mt-1">{{ form.duration.errors.0 }}</div>{% endif %}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ form.days_left.label }}</label>
+          {{ form.days_left }}
+          <div class="text-muted" style="font-size:0.78rem;margin-top:0.25rem">{{ form.days_left.help_text }}</div>
+          {% if form.days_left.errors %}<div class="text-danger small mt-1">{{ form.days_left.errors.0 }}</div>{% endif %}
+        </div>
+      </div>
+
+      <!-- Non-field errors -->
+      {% if form.non_field_errors %}
+      <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+      {% endif %}
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="btn-predict" id="submitBtn">
+          <i class="bi bi-calculator-fill me-2"></i>Calculate Price
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ── How it works ─────────────────────────────────────────────────── -->
+  <div class="mt-5">
+    <div class="section-heading"><i class="bi bi-info-circle-fill text-primary"></i> How it Works</div>
+    <div class="row g-3">
+      {% for step in steps %}
+      <div class="col-md-4">
+        <div class="card-glass p-3 h-100 text-center">
+          <div style="font-size:2rem;margin-bottom:.5rem">{{ step.icon }}</div>
+          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:.9rem">{{ step.title }}</div>
+          <p class="text-muted mb-0" style="font-size:.82rem">{{ step.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('predictForm').addEventListener('submit', function() {
+  const btn = document.getElementById('submitBtn');
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Predicting…';
+  btn.disabled = true;
+});
+</script>
+{% endblock %}

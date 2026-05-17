@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block title %}Analytics Dashboard — FlightML{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container text-center">
+    <h1><i class="bi bi-bar-chart-fill me-2"></i>Analytics Dashboard</h1>
+    <p>Explore price patterns across routes, airlines, classes and time.</p>
+  </div>
+</section>
+
+<div class="container pb-5">
+
+  <!-- ── KPI Row ────────────────────────────────────────────────────────── -->
+  {% with s=summary %}
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md">
+      <div class="stat-pill text-center">
+        <div class="stat-val">{{ s.total_records }}</div>
+        <div class="stat-lbl"><i class="bi bi-database-fill text-primary me-1"></i>Records</div>
+      </div>
+    </div>
+    <div class="col-6 col-md">
+      <div class="stat-pill text-center">
+        <div class="stat-val" style="color:var(--mint)">₹{{ s.avg_price|floatformat:0 }}</div>
+        <div class="stat-lbl"><i class="bi bi-graph-up-arrow text-success me-1"></i>Avg Price</div>
+      </div>
+    </div>
+    <div class="col-6 col-md">
+      <div class="stat-pill text-center">
+        <div class="stat-val" style="color:var(--cobalt)">₹{{ s.min_price }}</div>
+        <div class="stat-lbl"><i class="bi bi-arrow-down-short me-1"></i>Min Price</div>
+      </div>
+    </div>
+    <div class="col-6 col-md">
+      <div class="stat-pill text-center">
+        <div class="stat-val" style="color:var(--rose)">₹{{ s.max_price }}</div>
+        <div class="stat-lbl"><i class="bi bi-arrow-up-short me-1"></i>Max Price</div>
+      </div>
+    </div>
+    <div class="col-6 col-md">
+      <div class="stat-pill text-center">
+        <div class="stat-val" style="color:var(--amber)">{{ s.total_predictions }}</div>
+        <div class="stat-lbl"><i class="bi bi-lightning-fill me-1"></i>Predictions</div>
+      </div>
+    </div>
+  </div>
+  {% endwith %}
+
+  <!-- ── Row 1: Airline + Class ─────────────────────────────────────────── -->
+  <div class="section-heading"><i class="bi bi-airplane-fill text-primary"></i> Airline & Class Analysis</div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-7">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-building"></i> Avg Price by Airline</div>
+        <canvas id="c1"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="chart-wrap h-100">
+        <div class="chart-title"><i class="bi bi-pie-chart-fill"></i> Price by Class</div>
+        <canvas id="c2"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Row 2: Stops + Routes ──────────────────────────────────────────── -->
+  <div class="section-heading"><i class="bi bi-map-fill text-primary"></i> Routes & Stops</div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-5">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-signpost-split"></i> Avg Price by Stops</div>
+        <canvas id="c3"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-geo-alt-fill"></i> Top 8 Routes by Avg Price</div>
+        <canvas id="c4"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Row 3: Scatter + Days ──────────────────────────────────────────── -->
+  <div class="section-heading"><i class="bi bi-graph-up text-primary"></i> Price Correlations</div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-6">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-clock"></i> Price vs Duration (scatter sample)</div>
+        <canvas id="c5"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-calendar3"></i> Avg Price vs Days Left</div>
+        <canvas id="c6"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Row 4: Prediction history ──────────────────────────────────────── -->
+  <div class="section-heading"><i class="bi bi-clock-history text-primary"></i> Prediction Activity</div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-7">
+      <div class="chart-wrap">
+        <div class="chart-title"><i class="bi bi-activity"></i> Recent Predictions Timeline</div>
+        <canvas id="c7"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="card-glass p-3">
+        <h6 style="font-family:'Sora',sans-serif;font-weight:700;font-size:.85rem;color:var(--slate);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem">Recent Predictions</h6>
+        {% if recent_preds %}
+        <div style="max-height:280px;overflow-y:auto">
+          <table class="table table-sm" style="font-size:.82rem">
+            <thead><tr><th>Route</th><th>Class</th><th class="text-end">Price</th></tr></thead>
+            <tbody>
+            {% for p in recent_preds %}
+            <tr>
+              <td>{{ p.source_city }} → {{ p.destination_city }}</td>
+              <td>{{ p.flight_class }}</td>
+              <td class="text-end fw-bold" style="color:var(--cobalt)">₹{{ p.predicted_price|floatformat:0 }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <p class="text-muted text-center py-3" style="font-size:.9rem">No predictions yet.<br>
+          <a href="{% url 'predictor:predict' %}">Make your first prediction →</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const P = ['#1446A0','#3A86FF','#00C9A7','#FFB703','#EF476F','#8338EC','#FB5607','#06D6A0'];
+
+function bar(id, lbl, data, label, horiz=false) {
+  new Chart(document.getElementById(id), {
+    type: 'bar',
+    data: { labels: lbl, datasets: [{ label, data,
+      backgroundColor: P.map(c => c+'CC'), borderWidth:0, borderRadius:4 }]},
+    options: {
+      indexAxis: horiz ? 'y' : 'x',
+      responsive:true, maintainAspectRatio:true,
+      plugins: { legend:{display:false}, tooltip:{callbacks:{
+        label: ctx => ' ₹' + Number(horiz?ctx.parsed.x:ctx.parsed.y).toLocaleString('en-IN',{maximumFractionDigits:0})
+      }}},
+      scales: horiz ? {
+        x: { ticks:{callback:v=>'₹'+Number(v).toLocaleString('en-IN')}, grid:{color:'#e2e8f0'} },
+        y: { grid:{display:false} }
+      } : {
+        y: { ticks:{callback:v=>'₹'+Number(v).toLocaleString('en-IN')}, grid:{color:'#e2e8f0'} },
+        x: { grid:{display:false} }
+      }
+    }
+  });
+}
+
+const d1 = {{ chart_airline|safe }};
+const d2 = {{ chart_class|safe }};
+const d3 = {{ chart_stops|safe }};
+const d4 = {{ chart_routes|safe }};
+const d5 = {{ chart_scatter|safe }};
+const d6 = {{ chart_days|safe }};
+const d7 = {{ chart_history|safe }};
+
+bar('c1', d1.labels, d1.values, 'Avg Price');
+// Doughnut
+new Chart(document.getElementById('c2'), {
+  type:'doughnut',
+  data:{ labels:d2.labels, datasets:[{data:d2.values, backgroundColor:P, borderColor:'#fff', borderWidth:3}]},
+  options:{ responsive:true, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{
+    label: ctx => ' ₹' + Number(ctx.parsed).toLocaleString('en-IN',{maximumFractionDigits:0})
+  }}}}
+});
+bar('c3', d3.labels, d3.values, 'Avg Price');
+bar('c4', d4.labels, d4.values, 'Avg Price', true);
+
+// Scatter
+new Chart(document.getElementById('c5'), {
+  type:'scatter',
+  data:{ datasets:[{label:'Price vs Duration', data:d5,
+    backgroundColor:'rgba(58,134,255,0.3)', borderColor:'#3A86FF', pointRadius:4}]},
+  options:{
+    responsive:true, maintainAspectRatio:true,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{
+      label: ctx => ` dur:${ctx.parsed.x}h → ₹${Number(ctx.parsed.y).toLocaleString('en-IN')}`
+    }}},
+    scales:{
+      x:{ title:{display:true,text:'Duration (hours)'}, grid:{color:'#e2e8f0'} },
+      y:{ ticks:{callback:v=>'₹'+Number(v).toLocaleString('en-IN')}, grid:{color:'#e2e8f0'} }
+    }
+  }
+});
+
+// Line: days
+new Chart(document.getElementById('c6'), {
+  type:'line',
+  data:{ labels:d6.labels, datasets:[{label:'Avg Price',data:d6.values,
+    borderColor:'#FFB703', backgroundColor:'rgba(255,183,3,0.1)',
+    fill:true, tension:0.4, pointRadius:0}]},
+  options:{
+    responsive:true, maintainAspectRatio:true,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{
+      label: ctx => ' ₹' + Number(ctx.parsed.y).toLocaleString('en-IN',{maximumFractionDigits:0})
+    }}},
+    scales:{
+      y:{ticks:{callback:v=>'₹'+Number(v).toLocaleString('en-IN')}, grid:{color:'#e2e8f0'}},
+      x:{grid:{display:false}, title:{display:true,text:'Days Left'}}
+    }
+  }
+});
+
+// Line: prediction history
+if(d7.labels && d7.labels.length) {
+  new Chart(document.getElementById('c7'), {
+    type:'line',
+    data:{ labels:d7.labels, datasets:[{label:'Predicted Price',data:d7.values,
+      borderColor:'#00C9A7', backgroundColor:'rgba(0,201,167,0.1)',
+      fill:true, tension:0.4, pointRadius:5, pointBackgroundColor:'#00C9A7'}]},
+    options:{
+      responsive:true, maintainAspectRatio:true,
+      plugins:{ legend:{display:false}, tooltip:{callbacks:{
+        label: ctx => ' ₹' + Number(ctx.parsed.y).toLocaleString('en-IN',{maximumFractionDigits:0})
+      }}},
+      scales:{
+        y:{ticks:{callback:v=>'₹'+Number(v).toLocaleString('en-IN')}, grid:{color:'#e2e8f0'}},
+        x:{grid:{display:false}}
+      }
+    }
+  });
+} else {
+  document.getElementById('c7').insertAdjacentHTML('afterend',
+    '<p class="text-muted text-center py-3" style="font-size:.9rem">No predictions yet.</p>');
+}
+</script>
+{% endblock %}

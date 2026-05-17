@@ -1,0 +1,382 @@
+[2026-05-17 21:18:45] [INFO] [django.utils.autoreload] [autoreload:681] — Watching for file changes with StatReloader
+[2026-05-17 21:18:50] [INFO] [django.server] [log:249] — "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:18:58] [INFO] [django.server] [log:249] — "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:18:58] [WARNING] [django.request] [log:249] — Not Found: /favicon.ico
+[2026-05-17 21:18:58] [WARNING] [django.server] [log:249] — "GET /favicon.ico HTTP/1.1" 404 3678
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /admin/ HTTP/1.1" 302 0
+[2026-05-17 21:19:04] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3323
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/jazzmin/css/main.css HTTP/1.1" 200 14372
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 18270
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103010
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/bootswatch/flatly/bootstrap.min.css HTTP/1.1" 200 233370
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 298755
+[2026-05-17 21:19:04] [INFO] [django.server] [log:249] — "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+[2026-05-17 21:19:28] [INFO] [django.server] [log:249] — "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2026-05-17 21:19:28] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:28] [INFO] [django.server] [log:249] — "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:19:28] [INFO] [django.server] [log:249] — "GET /static/jazzmin/js/main.js HTTP/1.1" 200 4542
+[2026-05-17 21:19:28] [INFO] [django.server] [log:249] — "GET /static/jazzmin/js/ui-builder.js HTTP/1.1" 200 12305
+[2026-05-17 21:19:28] [INFO] [django.server] [log:249] — "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+[2026-05-17 21:19:37] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:37] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:37] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:37] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightrecord/ HTTP/1.1" 200 93035
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+[2026-05-17 21:19:37] [INFO] [django.server] [log:249] — "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2205
+[2026-05-17 21:19:39] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:39] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:39] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:39] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:39] [INFO] [django.server] [log:249] — "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:19:39] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:40] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:40] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:40] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:40] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:40] [INFO] [django.server] [log:249] — "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:19:40] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:41] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:41] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:41] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:41] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:41] [INFO] [django.server] [log:249] — "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:19:41] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [INFO] [django.server] [log:249] — "GET /admin/predictor/stoptype/ HTTP/1.1" 200 39894
+[2026-05-17 21:19:42] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:42] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightclass/ HTTP/1.1" 200 37958
+[2026-05-17 21:19:42] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:43] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:43] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:43] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:43] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:43] [INFO] [django.server] [log:249] — "GET /admin/predictor/predictionlog/ HTTP/1.1" 200 40169
+[2026-05-17 21:19:43] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:44] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:44] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:44] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:44] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:44] [INFO] [django.server] [log:249] — "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:19:44] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:46] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:46] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:46] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:46] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:46] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightrecord/ HTTP/1.1" 200 93035
+[2026-05-17 21:19:46] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:47] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:47] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:47] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:47] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:47] [INFO] [django.server] [log:249] — "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:19:47] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:48] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:48] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:48] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:48] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:48] [INFO] [django.server] [log:249] — "GET /admin/predictor/stoptype/ HTTP/1.1" 200 39894
+[2026-05-17 21:19:48] [INFO] [django.server] [log:249] — "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:19:50] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:50] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:50] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:50] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:50] [INFO] [django.server] [log:249] — "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightrecord/ HTTP/1.1" 200 93035
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:51] [INFO] [django.server] [log:249] — "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [INFO] [django.server] [log:249] — "GET /admin/predictor/predictionlog/ HTTP/1.1" 200 40169
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:52] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightclass/ HTTP/1.1" 200 37958
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [INFO] [django.server] [log:249] — "GET /admin/predictor/stoptype/ HTTP/1.1" 200 39894
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:53] [INFO] [django.server] [log:249] — "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [INFO] [django.server] [log:249] — "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [INFO] [django.server] [log:249] — "GET /admin/predictor/flightrecord/ HTTP/1.1" 200 93035
+[2026-05-17 21:19:54] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:54] [INFO] [django.server] [log:249] — "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:19:55] [INFO] [django.server] [log:249] — "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2026-05-17 21:19:55] [WARNING] [jazzmin.settings] [settings:278] — JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:19:55] [INFO] [django.server] [log:249] — "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:19:58] [INFO] [django.server] [log:249] — "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:20:25] [INFO] [django.server] [log:249] — "POST /predict/ HTTP/1.1" 200 20303
+[2026-05-17 21:20:57] [INFO] [django.utils.autoreload] [autoreload:681] — Watching for file changes with StatReloader
+[2026-05-17 21:21:01] [INFO] [django.server] [log:249] — "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:21:07] [INFO] [django.server] [log:249] — "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:21:29] [INFO] [django.server] [log:249] — "POST /predict/ HTTP/1.1" 200 20303
+[2026-05-17 21:25:30] [INFO] [django.utils.autoreload] [autoreload:681] â€” Watching for file changes with StatReloader
+[2026-05-17 21:25:35] [INFO] [django.server] [log:249] â€” "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:25:37] [INFO] [django.server] [log:249] â€” "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:25:50] [INFO] [django.server] [log:249] â€” "POST /predict/ HTTP/1.1" 200 20275
+[2026-05-17 21:33:09] [INFO] [django.utils.autoreload] [autoreload:681] â€” Watching for file changes with StatReloader
+[2026-05-17 21:33:15] [INFO] [django.server] [log:249] â€” "POST /predict/ HTTP/1.1" 302 0
+[2026-05-17 21:33:15] [INFO] [django.server] [log:249] â€” "GET /result/1/ HTTP/1.1" 200 21802
+[2026-05-17 21:33:35] [INFO] [django.server] [log:249] â€” "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:33:48] [INFO] [django.server] [log:249] â€” "POST /predict/ HTTP/1.1" 302 0
+[2026-05-17 21:33:48] [INFO] [django.server] [log:249] â€” "GET /result/2/ HTTP/1.1" 200 21824
+[2026-05-17 21:33:58] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:33:58] [INFO] [django.server] [log:249] â€” "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:34:13] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:13] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /admin/auth/user/add/ HTTP/1.1" 200 39882
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /static/jazzmin/plugins/bootstrap-show-modal/bootstrap-show-modal.min.js HTTP/1.1" 200 2996
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /static/jazzmin/js/related-modal.js HTTP/1.1" 200 6403
+[2026-05-17 21:34:13] [INFO] [django.server] [log:249] â€” "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6045
+[2026-05-17 21:34:17] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:17] [INFO] [django.server] [log:249] â€” "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:34:18] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:18] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:18] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:18] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:18] [INFO] [django.server] [log:249] â€” "GET /admin/auth/user/ HTTP/1.1" 200 41401
+[2026-05-17 21:34:18] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:18] [INFO] [django.server] [log:249] â€” "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+[2026-05-17 21:34:21] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:21] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:21] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:21] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:21] [ERROR] [django.request] [log:249] â€” Internal Server Error: /admin/predictor/predictionlog/
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'predicted_price_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+        "%s has no field named '%s'" % (self.object_name, field_name)
+    )
+django.core.exceptions.FieldDoesNotExist: PredictionLog has no field named 'predicted_price_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ~~~~^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\admin.py", line 224, in predicted_price_display
+    return format_html(
+        '<strong style="color:#0d6efd">â‚¹{:,.0f}</strong>',
+        obj.predicted_price,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\django\utils\html.py", line 140, in format_html
+    return mark_safe(format_string.format(*args_safe, **kwargs_safe))
+                     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'SafeString'
+[2026-05-17 21:34:21] [ERROR] [django.server] [log:249] â€” "GET /admin/predictor/predictionlog/ HTTP/1.1" 500 454986
+[2026-05-17 21:34:27] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:27] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:27] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:27] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:27] [INFO] [django.server] [log:249] â€” "GET /admin/auth/user/ HTTP/1.1" 200 41401
+[2026-05-17 21:34:28] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:28] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:28] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:28] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:28] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/flightclass/ HTTP/1.1" 200 37958
+[2026-05-17 21:34:28] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:31] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:31] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:31] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:31] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:31] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/stoptype/ HTTP/1.1" 200 39894
+[2026-05-17 21:34:31] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:33] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:33] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:33] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:33] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:33] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:34:33] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:37] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:37] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:37] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:37] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:37] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:34:37] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:40] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:40] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:40] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:40] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:40] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/flightrecord/ HTTP/1.1" 200 93035
+[2026-05-17 21:34:40] [INFO] [django.server] [log:249] â€” "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/airline/ HTTP/1.1" 200 41074
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:55] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/timeslot/ HTTP/1.1" 200 41688
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/stoptype/ HTTP/1.1" 200 39894
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [INFO] [django.server] [log:249] â€” "GET /admin/predictor/flightclass/ HTTP/1.1" 200 37958
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [INFO] [django.server] [log:249] â€” "GET /admin/auth/user/ HTTP/1.1" 200 41401
+[2026-05-17 21:34:56] [WARNING] [jazzmin.settings] [settings:278] â€” JAZZMIN_UI_TWEAKS['dark_mode_theme'] is deprecated and ignored. Use default_theme_mode='auto' (or 'light'/'dark') instead. All themes now support light/dark via data-bs-theme.
+[2026-05-17 21:34:56] [INFO] [django.server] [log:249] â€” "GET /admin/ HTTP/1.1" 200 43010
+[2026-05-17 21:34:57] [INFO] [django.server] [log:249] â€” "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:35:00] [INFO] [django.server] [log:249] â€” "GET /predict/ HTTP/1.1" 200 21307
+[2026-05-17 21:35:02] [INFO] [django.server] [log:249] â€” "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:35:03] [INFO] [django.server] [log:249] â€” "GET /dashboard/ HTTP/1.1" 200 31731
+[2026-05-17 21:35:05] [INFO] [django.server] [log:249] â€” "GET / HTTP/1.1" 200 20460
+[2026-05-17 21:35:06] [INFO] [django.server] [log:249] â€” "GET /dashboard/ HTTP/1.1" 200 31730

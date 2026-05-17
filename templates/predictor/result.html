@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% block title %}Prediction Result — FlightML{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container text-center">
+    <h1><i class="bi bi-check-circle-fill me-2"></i>Prediction Result</h1>
+    <p>Here's the MLR model's estimated fare for your selected journey.</p>
+  </div>
+</section>
+
+<div class="container pb-5">
+
+  <div class="row g-4">
+
+    <!-- ── Left: Price Hero + Details ──────────────────────────────────── -->
+    <div class="col-lg-4">
+
+      <!-- Price hero card -->
+      <div class="price-hero mb-3">
+        <div class="price-label">Estimated Price</div>
+        <div class="price-val">₹{{ log.predicted_price|floatformat:0 }}</div>
+        <div class="price-badge">MLR Prediction</div>
+      </div>
+
+      <!-- Journey details -->
+      <div class="card-glass p-3 mb-3">
+        <h6 style="font-family:'Sora',sans-serif;font-weight:700;font-size:.85rem;color:var(--slate);text-transform:uppercase;letter-spacing:.05em">Journey Details</h6>
+        <table class="table table-sm mb-0" style="font-size:.9rem">
+          <tr><td class="text-muted">Airline</td>     <td class="fw-600 text-end">{{ log.airline }}</td></tr>
+          <tr><td class="text-muted">From</td>        <td class="fw-600 text-end">{{ log.source_city }}</td></tr>
+          <tr><td class="text-muted">To</td>          <td class="fw-600 text-end">{{ log.destination_city }}</td></tr>
+          <tr><td class="text-muted">Departure</td>   <td class="fw-600 text-end">{{ log.departure_time }}</td></tr>
+          <tr><td class="text-muted">Arrival</td>     <td class="fw-600 text-end">{{ log.arrival_time }}</td></tr>
+          <tr><td class="text-muted">Stops</td>       <td class="fw-600 text-end">{{ log.stops }}</td></tr>
+          <tr><td class="text-muted">Class</td>       <td class="fw-600 text-end">{{ log.flight_class }}</td></tr>
+          <tr><td class="text-muted">Duration</td>    <td class="fw-600 text-end">{{ log.duration }} h</td></tr>
+          <tr><td class="text-muted">Days Left</td>   <td class="fw-600 text-end">{{ log.days_left }}</td></tr>
+        </table>
+      </div>
+
+      <!-- Actions -->
+      <div class="d-grid gap-2">
+        <a href="{% url 'predictor:predict' %}" class="btn btn-outline-primary rounded-3 fw-600">
+          <i class="bi bi-arrow-repeat me-1"></i>New Prediction
+        </a>
+        <a href="{% url 'predictor:dashboard' %}" class="btn btn-outline-secondary rounded-3">
+          <i class="bi bi-bar-chart me-1"></i>View Dashboard
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Right: Charts ────────────────────────────────────────────────── -->
+    <div class="col-lg-8">
+
+      <!-- Chart 1: Price distribution for this route -->
+      <div class="chart-wrap mb-3">
+        <div class="chart-title">
+          <i class="bi bi-distribute-vertical"></i>
+          Historical Price Distribution — {{ log.airline }} · {{ log.source_city }} → {{ log.destination_city }} [{{ log.flight_class }}]
+        </div>
+        <canvas id="chartDistrib" style="max-height:240px"></canvas>
+        <div class="text-muted mt-2" id="distStats" style="font-size:.8rem"></div>
+      </div>
+
+      <!-- Chart 2: All airlines for this route -->
+      <div class="chart-wrap mb-3">
+        <div class="chart-title">
+          <i class="bi bi-building"></i>
+          Avg Price by Airline — {{ log.source_city }} → {{ log.destination_city }} [{{ log.flight_class }}]
+        </div>
+        <canvas id="chartRouteAirlines" style="max-height:220px"></canvas>
+      </div>
+
+      <!-- Chart 3: Recent predictions history -->
+      <div class="chart-wrap">
+        <div class="chart-title">
+          <i class="bi bi-clock-history"></i>
+          Your Recent Predictions
+        </div>
+        <canvas id="chartHistory" style="max-height:200px"></canvas>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const PALETTE = ['#1446A0','#3A86FF','#00C9A7','#FFB703','#EF476F','#8338EC','#FB5607'];
+const PRED_PRICE = {{ log.predicted_price|floatformat:2 }};
+
+/* ── Chart 1: distribution ───────────────────────────────────────────── */
+const distData = {{ chart_distribution|safe }};
+if (distData.buckets && distData.buckets.length) {
+  // Find which bucket the prediction falls in
+  const predLabel = '₹' + Math.round(PRED_PRICE).toLocaleString('en-IN');
+
+  new Chart(document.getElementById('chartDistrib'), {
+    type: 'bar',
+    data: {
+      labels: distData.labels || distData.buckets,
+      datasets: [{
+        label: 'Historical Count',
+        data: distData.counts,
+        backgroundColor: (distData.labels || distData.buckets).map((l, i) => {
+          // highlight the bar nearest to prediction
+          return i === Math.round(distData.counts.length / 2) ? '#EF476F' : '#3A86FF88';
+        }),
+        borderWidth: 0, borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        label: ctx => ' ' + ctx.parsed.y + ' flights'
+      }}},
+      scales: {
+        y: { title: { display: true, text: 'Count' }, grid: { color: '#e2e8f0' } },
+        x: { grid: { display: false }, ticks: { maxRotation: 45, font: { size: 10 } } }
+      }
+    }
+  });
+
+  // Stats
+  if (distData.avg) {
+    document.getElementById('distStats').innerHTML =
+      `Historical records: avg ₹${Number(distData.avg).toLocaleString('en-IN')} &nbsp;|&nbsp;`+
+      `min ₹${Number(distData.min).toLocaleString('en-IN')} &nbsp;|&nbsp;`+
+      `max ₹${Number(distData.max).toLocaleString('en-IN')} &nbsp;|&nbsp;`+
+      `<span style="color:#1446A0;font-weight:700">Your prediction: ₹${Math.round(PRED_PRICE).toLocaleString('en-IN')}</span>`;
+  }
+} else {
+  document.getElementById('chartDistrib').parentElement.innerHTML +=
+    '<p class="text-muted text-center">No historical data for this route/airline/class combination.</p>';
+}
+
+/* ── Chart 2: airlines for route ────────────────────────────────────── */
+const routeData = {{ chart_route_airlines|safe }};
+if (routeData.labels && routeData.labels.length) {
+  new Chart(document.getElementById('chartRouteAirlines'), {
+    type: 'bar',
+    data: {
+      labels: routeData.labels,
+      datasets: [{
+        label: 'Avg Price (₹)',
+        data: routeData.values,
+        backgroundColor: PALETTE.map(c => c + 'CC'),
+        borderWidth: 0, borderRadius: 6,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        label: ctx => ' ₹' + Number(ctx.parsed.x).toLocaleString('en-IN', {maximumFractionDigits:0})
+      }}},
+      scales: {
+        x: { ticks: { callback: v => '₹' + Number(v).toLocaleString('en-IN') }, grid: { color: '#e2e8f0' } },
+        y: { grid: { display: false } }
+      }
+    }
+  });
+}
+
+/* ── Chart 3: history ────────────────────────────────────────────────── */
+const histData = {{ chart_history|safe }};
+if (histData.labels && histData.labels.length) {
+  new Chart(document.getElementById('chartHistory'), {
+    type: 'line',
+    data: {
+      labels: histData.labels,
+      datasets: [{
+        label: 'Predicted Price (₹)',
+        data: histData.values,
+        borderColor: '#00C9A7',
+        backgroundColor: 'rgba(0,201,167,0.1)',
+        fill: true, tension: 0.4, pointRadius: 5,
+        pointBackgroundColor: '#00C9A7',
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        label: ctx => ' ₹' + Number(ctx.parsed.y).toLocaleString('en-IN', {maximumFractionDigits:0})
+      }}},
+      scales: {
+        y: { ticks: { callback: v => '₹' + Number(v).toLocaleString('en-IN') }, grid: { color: '#e2e8f0' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+}
+</script>
+{% endblock %}

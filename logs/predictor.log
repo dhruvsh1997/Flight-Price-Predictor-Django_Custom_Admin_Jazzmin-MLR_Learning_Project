@@ -1,0 +1,1030 @@
+[2026-05-17 16:49:54] [INFO] [ml_training] [test:152] � ============================================================
+[2026-05-17 16:49:54] [INFO] [ml_training:152] � ============================================================
+[2026-05-17 16:49:54] [INFO] [ml_training] [test:153] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 16:49:54] [INFO] [ml_training:153] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 16:50:06] [INFO] [ml_training] [test:164] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 16:50:06] [INFO] [ml_training:164] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 16:50:06] [DEBUG] [ml_training] [test:165] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 16:50:06] [DEBUG] [ml_training:165] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 16:50:06] [DEBUG] [ml_training] [test:166] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 16:50:06] [DEBUG] [ml_training:166] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 16:50:06] [INFO] [ml_training] [test:173] � ============================================================
+[2026-05-17 16:50:06] [INFO] [ml_training:173] � ============================================================
+[2026-05-17 16:50:06] [INFO] [ml_training] [test:174] � STEP 2 � Preprocessing
+[2026-05-17 16:50:06] [INFO] [ml_training:174] � STEP 2 � Preprocessing
+[2026-05-17 16:50:06] [DEBUG] [ml_training] [test:178] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 16:50:06] [DEBUG] [ml_training:178] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 16:50:06] [INFO] [ml_training] [test:184] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 16:50:06] [INFO] [ml_training:184] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:204] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 16:50:07] [INFO] [ml_training:204] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:210] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 16:50:07] [INFO] [ml_training:210] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:215] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 16:50:07] [INFO] [ml_training:215] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:222] � ============================================================
+[2026-05-17 16:50:07] [INFO] [ml_training:222] � ============================================================
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:223] � STEP 3 � Seeding normalised database tables
+[2026-05-17 16:50:07] [INFO] [ml_training:223] � STEP 3 � Seeding normalised database tables
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:232] � Airline: 6 new records inserted (total unique: 6)
+[2026-05-17 16:50:07] [INFO] [ml_training:232] � Airline: 6 new records inserted (total unique: 6)
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:232] � City: 6 new records inserted (total unique: 6)
+[2026-05-17 16:50:07] [INFO] [ml_training:232] � City: 6 new records inserted (total unique: 6)
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:245] � TimeSlot: 6 records
+[2026-05-17 16:50:07] [INFO] [ml_training:245] � TimeSlot: 6 records
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:250] � StopType: 3 records
+[2026-05-17 16:50:07] [INFO] [ml_training:250] � StopType: 3 records
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:254] � FlightClass: 2 records
+[2026-05-17 16:50:07] [INFO] [ml_training:254] � FlightClass: 2 records
+[2026-05-17 16:50:07] [INFO] [ml_training] [test:265] � Bulk-inserting 300153 FlightRecord rows �
+[2026-05-17 16:50:07] [INFO] [ml_training:265] � Bulk-inserting 300153 FlightRecord rows �
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:298] � FlightRecord bulk insert complete: 300153 inserted, 0 skipped
+[2026-05-17 16:50:27] [INFO] [ml_training:298] � FlightRecord bulk insert complete: 300153 inserted, 0 skipped
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:307] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training:307] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:308] � STEP 4 � Building feature matrix
+[2026-05-17 16:50:27] [INFO] [ml_training:308] � STEP 4 � Building feature matrix
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:314] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 16:50:27] [INFO] [ml_training:314] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:315] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 16:50:27] [INFO] [ml_training:315] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:316] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 16:50:27] [INFO] [ml_training:316] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:325] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training:325] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:326] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 16:50:27] [INFO] [ml_training:326] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:332] � Train size: 240122  Test size: 60031
+[2026-05-17 16:50:27] [INFO] [ml_training:332] � Train size: 240122  Test size: 60031
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:339] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training:339] � ============================================================
+[2026-05-17 16:50:27] [INFO] [ml_training] [test:340] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 16:50:27] [INFO] [ml_training:340] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 16:50:27] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 16:50:27] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:357] � Intercept: 20888.5724
+[2026-05-17 16:50:28] [INFO] [ml_training:357] � Intercept: 20888.5724
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient airline                   : +1745.4138
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient airline                   : +1745.4138
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient source_city               : +182.9751
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient source_city               : +182.9751
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient destination_city          : +211.9929
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient destination_city          : +211.9929
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient departure_time            : +62.3972
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient departure_time            : +62.3972
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient stops                     : -2187.9379
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient stops                     : -2187.9379
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient class                     : -20629.5513
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient class                     : -20629.5513
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient duration                  : +666.5497
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient duration                  : +666.5497
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:359] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 16:50:28] [INFO] [ml_training:359] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:367] � ============================================================
+[2026-05-17 16:50:28] [INFO] [ml_training:367] � ============================================================
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:368] � STEP 7 � Model Evaluation
+[2026-05-17 16:50:28] [INFO] [ml_training:368] � STEP 7 � Model Evaluation
+[2026-05-17 16:50:28] [INFO] [ml_training] [test:386] � Running 5-fold cross-validation on training set �
+[2026-05-17 16:50:28] [INFO] [ml_training:386] � Running 5-fold cross-validation on training set �
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:394] �   EVALUATION METRICS (Test Set)
+[2026-05-17 16:50:30] [INFO] [ml_training:394] �   EVALUATION METRICS (Test Set)
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:399] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 16:50:30] [INFO] [ml_training:399] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:400] �   Adj. R�   :  0.904540
+[2026-05-17 16:50:30] [INFO] [ml_training:400] �   Adj. R�   :  0.904540
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:402] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 16:50:30] [INFO] [ml_training:402] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:403] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 16:50:30] [INFO] [ml_training:403] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:417] � Sample predictions (first 5 test rows):
+[2026-05-17 16:50:30] [INFO] [ml_training:417] � Sample predictions (first 5 test rows):
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:434] � ============================================================
+[2026-05-17 16:50:30] [INFO] [ml_training:434] � ============================================================
+[2026-05-17 16:50:30] [INFO] [ml_training] [test:435] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 16:50:30] [INFO] [ml_training:435] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:13:35] [INFO] [ml_training] [test:152] � ============================================================
+[2026-05-17 21:13:35] [INFO] [ml_training:152] � ============================================================
+[2026-05-17 21:13:35] [INFO] [ml_training] [test:153] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:13:35] [INFO] [ml_training:153] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:164] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 21:13:48] [INFO] [ml_training:164] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:165] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:165] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:166] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:13:48] [DEBUG] [ml_training:166] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:173] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:173] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:174] � STEP 2 � Preprocessing
+[2026-05-17 21:13:48] [INFO] [ml_training:174] � STEP 2 � Preprocessing
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:178] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:178] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:184] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:13:48] [INFO] [ml_training:184] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:204] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:13:48] [INFO] [ml_training:204] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:210] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:13:48] [INFO] [ml_training:210] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:215] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 21:13:48] [INFO] [ml_training:215] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:222] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:222] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:223] � STEP 3 � Seeding normalised database tables
+[2026-05-17 21:13:48] [INFO] [ml_training:223] � STEP 3 � Seeding normalised database tables
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:232] � Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:13:48] [INFO] [ml_training:232] � Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:232] � City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:13:48] [INFO] [ml_training:232] � City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:245] � TimeSlot: 6 records
+[2026-05-17 21:13:48] [INFO] [ml_training:245] � TimeSlot: 6 records
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:250] � StopType: 3 records
+[2026-05-17 21:13:48] [INFO] [ml_training:250] � StopType: 3 records
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:254] � FlightClass: 2 records
+[2026-05-17 21:13:48] [INFO] [ml_training:254] � FlightClass: 2 records
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:259] � FlightRecord table already has 300153 rows � skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:13:48] [INFO] [ml_training:259] � FlightRecord table already has 300153 rows � skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:307] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:307] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:308] � STEP 4 � Building feature matrix
+[2026-05-17 21:13:48] [INFO] [ml_training:308] � STEP 4 � Building feature matrix
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:314] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:13:48] [INFO] [ml_training:314] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:315] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:13:48] [INFO] [ml_training:315] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:316] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:13:48] [INFO] [ml_training:316] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:325] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:325] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:326] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 21:13:48] [INFO] [ml_training:326] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:332] � Train size: 240122  Test size: 60031
+[2026-05-17 21:13:48] [INFO] [ml_training:332] � Train size: 240122  Test size: 60031
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:339] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:339] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:340] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 21:13:48] [INFO] [ml_training:340] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:13:48] [DEBUG] [ml_training] [test:134] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:13:48] [DEBUG] [ml_training:134] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:357] � Intercept: 20888.5724
+[2026-05-17 21:13:48] [INFO] [ml_training:357] � Intercept: 20888.5724
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient airline                   : +1745.4138
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient airline                   : +1745.4138
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient source_city               : +182.9751
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient source_city               : +182.9751
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient destination_city          : +211.9929
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient destination_city          : +211.9929
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient departure_time            : +62.3972
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient departure_time            : +62.3972
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient stops                     : -2187.9379
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient stops                     : -2187.9379
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient class                     : -20629.5513
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient class                     : -20629.5513
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient duration                  : +666.5497
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient duration                  : +666.5497
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:359] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:13:48] [INFO] [ml_training:359] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:367] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training:367] � ============================================================
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:368] � STEP 7 � Model Evaluation
+[2026-05-17 21:13:48] [INFO] [ml_training:368] � STEP 7 � Model Evaluation
+[2026-05-17 21:13:48] [INFO] [ml_training] [test:386] � Running 5-fold cross-validation on training set �
+[2026-05-17 21:13:48] [INFO] [ml_training:386] � Running 5-fold cross-validation on training set �
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:394] �   EVALUATION METRICS (Test Set)
+[2026-05-17 21:13:50] [INFO] [ml_training:394] �   EVALUATION METRICS (Test Set)
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:397] �   MSE       : 49,200,540.29
+[2026-05-17 21:13:50] [INFO] [ml_training:397] �   MSE       : 49,200,540.29
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:399] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 21:13:50] [INFO] [ml_training:399] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:400] �   Adj. R�   :  0.904540
+[2026-05-17 21:13:50] [INFO] [ml_training:400] �   Adj. R�   :  0.904540
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:402] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:13:50] [INFO] [ml_training:402] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:403] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 21:13:50] [INFO] [ml_training:403] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:417] � Sample predictions (first 5 test rows):
+[2026-05-17 21:13:50] [INFO] [ml_training:417] � Sample predictions (first 5 test rows):
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:434] � ============================================================
+[2026-05-17 21:13:50] [INFO] [ml_training:434] � ============================================================
+[2026-05-17 21:13:50] [INFO] [ml_training] [test:435] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:13:50] [INFO] [ml_training:435] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:15:53] [INFO] [ml_training:451] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:15:53] [INFO] [ml_training:452] — ║  Flight Price Prediction — MLR Training Script       ║
+[2026-05-17 21:15:53] [INFO] [ml_training:453] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:15:53] [INFO] [ml_training] [test:159] � ============================================================
+[2026-05-17 21:15:53] [INFO] [ml_training:159] — ============================================================
+[2026-05-17 21:15:53] [INFO] [ml_training] [test:160] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:15:53] [INFO] [ml_training:160] — STEP 1 — Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:171] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 21:16:05] [INFO] [ml_training:171] — Dataset loaded: 300153 rows × 12 columns
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:172] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:172] — Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:173] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:16:05] [DEBUG] [ml_training:173] — Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:180] � ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training:180] — ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:181] � STEP 2 � Preprocessing
+[2026-05-17 21:16:05] [INFO] [ml_training:181] — STEP 2 — Preprocessing
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:185] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:185] — Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:191] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:16:05] [INFO] [ml_training:191] — Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:16:05] [INFO] [ml_training:204] — No missing values found ✓
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:211] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:16:05] [INFO] [ml_training:211] — Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:217] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:16:05] [INFO] [ml_training:217] — Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:222] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 21:16:05] [INFO] [ml_training:222] — Preprocessing complete. Final shape: 300153 × 10
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:229] � ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training:229] — ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:230] � STEP 3 � Seeding normalised database tables
+[2026-05-17 21:16:05] [INFO] [ml_training:230] — STEP 3 — Seeding normalised database tables
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:239] � Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:16:05] [INFO] [ml_training:239] — Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:239] � City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:16:05] [INFO] [ml_training:239] — City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:252] � TimeSlot: 6 records
+[2026-05-17 21:16:05] [INFO] [ml_training:252] — TimeSlot: 6 records
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:257] � StopType: 3 records
+[2026-05-17 21:16:05] [INFO] [ml_training:257] — StopType: 3 records
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:261] � FlightClass: 2 records
+[2026-05-17 21:16:05] [INFO] [ml_training:261] — FlightClass: 2 records
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:266] � FlightRecord table already has 300153 rows � skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:16:05] [INFO] [ml_training:266] — FlightRecord table already has 300153 rows — skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:314] � ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training:314] — ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:315] � STEP 4 � Building feature matrix
+[2026-05-17 21:16:05] [INFO] [ml_training:315] — STEP 4 — Building feature matrix
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:321] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:16:05] [INFO] [ml_training:321] — Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:322] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:16:05] [INFO] [ml_training:322] — X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:323] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:16:05] [INFO] [ml_training:323] — Target (price) — min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:332] � ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training:332] — ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:333] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 21:16:05] [INFO] [ml_training:333] — STEP 5 — Train/Test Split (80% train / 20% test)
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:339] � Train size: 240122  Test size: 60031
+[2026-05-17 21:16:05] [INFO] [ml_training:339] — Train size: 240122  Test size: 60031
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:346] � ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training:346] — ============================================================
+[2026-05-17 21:16:05] [INFO] [ml_training] [test:347] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 21:16:05] [INFO] [ml_training:347] — STEP 6 — Training Multiple Linear Regression Pipeline
+[2026-05-17 21:16:05] [INFO] [ml_training:348] — Pipeline: MultiColumnLabelEncoder → StandardScaler → LinearRegression
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:16:05] [DEBUG] [ml_training] [test:141] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:16:05] [DEBUG] [ml_training:141] — LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:364] � Intercept: 20888.5724
+[2026-05-17 21:16:06] [INFO] [ml_training:364] — Intercept: 20888.5724
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient airline                   : +1745.4138
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient airline                   : +1745.4138
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient source_city               : +182.9751
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient source_city               : +182.9751
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient destination_city          : +211.9929
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient destination_city          : +211.9929
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient departure_time            : +62.3972
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient departure_time            : +62.3972
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient stops                     : -2187.9379
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient stops                     : -2187.9379
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient class                     : -20629.5513
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient class                     : -20629.5513
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient duration                  : +666.5497
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient duration                  : +666.5497
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:366] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:16:06] [INFO] [ml_training:366] —   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:374] � ============================================================
+[2026-05-17 21:16:06] [INFO] [ml_training:374] — ============================================================
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:375] � STEP 7 � Model Evaluation
+[2026-05-17 21:16:06] [INFO] [ml_training:375] — STEP 7 — Model Evaluation
+[2026-05-17 21:16:06] [INFO] [ml_training] [test:393] � Running 5-fold cross-validation on training set �
+[2026-05-17 21:16:06] [INFO] [ml_training:393] — Running 5-fold cross-validation on training set …
+[2026-05-17 21:16:08] [INFO] [ml_training:400] — ────────────────────────────────────────────────────
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:401] �   EVALUATION METRICS (Test Set)
+[2026-05-17 21:16:08] [INFO] [ml_training:401] —   EVALUATION METRICS (Test Set)
+[2026-05-17 21:16:08] [INFO] [ml_training:402] — ────────────────────────────────────────────────────
+[2026-05-17 21:16:08] [INFO] [ml_training:403] —   MAE       : ₹4,624.99
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:404] �   MSE       : 49,200,540.29
+[2026-05-17 21:16:08] [INFO] [ml_training:404] —   MSE       : 49,200,540.29
+[2026-05-17 21:16:08] [INFO] [ml_training:405] —   RMSE      : ₹7,014.31
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:406] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 21:16:08] [INFO] [ml_training:406] —   R²        :  0.904554  (train: 0.904622)
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:407] �   Adj. R�   :  0.904540
+[2026-05-17 21:16:08] [INFO] [ml_training:407] —   Adj. R²   :  0.904540
+[2026-05-17 21:16:08] [INFO] [ml_training:408] — ────────────────────────────────────────────────────
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:409] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:16:08] [INFO] [ml_training:409] —   5-Fold CV R² scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:410] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 21:16:08] [INFO] [ml_training:410] —   CV Mean R²: 0.904608  ±  0.000674
+[2026-05-17 21:16:08] [INFO] [ml_training:411] — ────────────────────────────────────────────────────
+[2026-05-17 21:16:08] [INFO] [ml_training:421] — No significant overfitting detected ✓ (gap=0.0001)
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:424] � Sample predictions (first 5 test rows):
+[2026-05-17 21:16:08] [INFO] [ml_training:424] — Sample predictions (first 5 test rows):
+[2026-05-17 21:16:08] [INFO] [ml_training:426] —   Actual: ₹7366      Predicted: ₹4586      Error: ₹-2780
+[2026-05-17 21:16:08] [INFO] [ml_training:426] —   Actual: ₹64831     Predicted: ₹52842     Error: ₹-11989
+[2026-05-17 21:16:08] [INFO] [ml_training:426] —   Actual: ₹6195      Predicted: ₹7878      Error: ₹+1683
+[2026-05-17 21:16:08] [INFO] [ml_training:426] —   Actual: ₹60160     Predicted: ₹56120     Error: ₹-4040
+[2026-05-17 21:16:08] [INFO] [ml_training:426] —   Actual: ₹6578      Predicted: ₹6663      Error: ₹+85
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:441] � ============================================================
+[2026-05-17 21:16:08] [INFO] [ml_training:441] — ============================================================
+[2026-05-17 21:16:08] [INFO] [ml_training] [test:442] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:16:08] [INFO] [ml_training:442] — STEP 8 — Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:16:08] [INFO] [ml_training:445] — Model saved successfully (3.4 KB) ✓
+[2026-05-17 21:16:08] [INFO] [ml_training:464] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:16:08] [INFO] [ml_training:465] — ║  Training complete!                                  ║
+[2026-05-17 21:16:08] [INFO] [ml_training:466] — ║  R² = 0.9046  |  RMSE = ₹7,014.31               ║
+[2026-05-17 21:16:08] [INFO] [ml_training:468] — ║  Model saved → ml_models/flight_price_model.pkl     ║
+[2026-05-17 21:16:08] [INFO] [ml_training:469] — ║  Next: python manage.py runserver                    ║
+[2026-05-17 21:16:08] [INFO] [ml_training:470] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:17:55] [INFO] [ml_training:462] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:17:55] [INFO] [ml_training:463] — ║  Flight Price Prediction — MLR Training Script       ║
+[2026-05-17 21:17:55] [INFO] [ml_training:464] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:17:55] [INFO] [ml_training] [test:170] � ============================================================
+[2026-05-17 21:17:55] [INFO] [ml_training:170] — ============================================================
+[2026-05-17 21:17:55] [INFO] [ml_training] [test:171] � STEP 1 � Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:17:55] [INFO] [ml_training:171] — STEP 1 — Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:18:07] [INFO] [ml_training] [test:182] � Dataset loaded: 300153 rows � 12 columns
+[2026-05-17 21:18:07] [INFO] [ml_training:182] — Dataset loaded: 300153 rows × 12 columns
+[2026-05-17 21:18:07] [DEBUG] [ml_training] [test:183] � Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:18:07] [DEBUG] [ml_training:183] — Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:18:07] [DEBUG] [ml_training] [test:184] � Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:18:07] [DEBUG] [ml_training:184] — Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:18:07] [INFO] [ml_training] [test:191] � ============================================================
+[2026-05-17 21:18:07] [INFO] [ml_training:191] — ============================================================
+[2026-05-17 21:18:07] [INFO] [ml_training] [test:192] � STEP 2 � Preprocessing
+[2026-05-17 21:18:07] [INFO] [ml_training:192] — STEP 2 — Preprocessing
+[2026-05-17 21:18:07] [DEBUG] [ml_training] [test:196] � Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:18:07] [DEBUG] [ml_training:196] — Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:18:07] [INFO] [ml_training] [test:202] � Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:18:07] [INFO] [ml_training:202] — Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:18:07] [INFO] [ml_training:215] — No missing values found ✓
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:222] � Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:18:08] [INFO] [ml_training:222] — Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:228] � Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:18:08] [INFO] [ml_training:228] — Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:233] � Preprocessing complete. Final shape: 300153 � 10
+[2026-05-17 21:18:08] [INFO] [ml_training:233] — Preprocessing complete. Final shape: 300153 × 10
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:240] � ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training:240] — ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:241] � STEP 3 � Seeding normalised database tables
+[2026-05-17 21:18:08] [INFO] [ml_training:241] — STEP 3 — Seeding normalised database tables
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:250] � Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:18:08] [INFO] [ml_training:250] — Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:250] � City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:18:08] [INFO] [ml_training:250] — City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:263] � TimeSlot: 6 records
+[2026-05-17 21:18:08] [INFO] [ml_training:263] — TimeSlot: 6 records
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:268] � StopType: 3 records
+[2026-05-17 21:18:08] [INFO] [ml_training:268] — StopType: 3 records
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:272] � FlightClass: 2 records
+[2026-05-17 21:18:08] [INFO] [ml_training:272] — FlightClass: 2 records
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:277] � FlightRecord table already has 300153 rows � skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:18:08] [INFO] [ml_training:277] — FlightRecord table already has 300153 rows — skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:325] � ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training:325] — ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:326] � STEP 4 � Building feature matrix
+[2026-05-17 21:18:08] [INFO] [ml_training:326] — STEP 4 — Building feature matrix
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:332] � Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:18:08] [INFO] [ml_training:332] — Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:333] � X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:18:08] [INFO] [ml_training:333] — X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:334] � Target (price) � min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:18:08] [INFO] [ml_training:334] — Target (price) — min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:343] � ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training:343] — ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:344] � STEP 5 � Train/Test Split (80% train / 20% test)
+[2026-05-17 21:18:08] [INFO] [ml_training:344] — STEP 5 — Train/Test Split (80% train / 20% test)
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:350] � Train size: 240122  Test size: 60031
+[2026-05-17 21:18:08] [INFO] [ml_training:350] — Train size: 240122  Test size: 60031
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:357] � ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training:357] — ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:358] � STEP 6 � Training Multiple Linear Regression Pipeline
+[2026-05-17 21:18:08] [INFO] [ml_training:358] — STEP 6 — Training Multiple Linear Regression Pipeline
+[2026-05-17 21:18:08] [INFO] [ml_training:359] — Pipeline: MultiColumnLabelEncoder → StandardScaler → LinearRegression
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:18:08] [DEBUG] [ml_training] [test:152] � LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:18:08] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:375] � Intercept: 20888.5724
+[2026-05-17 21:18:08] [INFO] [ml_training:375] — Intercept: 20888.5724
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient airline                   : +1745.4138
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient airline                   : +1745.4138
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient source_city               : +182.9751
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient source_city               : +182.9751
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient destination_city          : +211.9929
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient destination_city          : +211.9929
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient departure_time            : +62.3972
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient departure_time            : +62.3972
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient stops                     : -2187.9379
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient stops                     : -2187.9379
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient class                     : -20629.5513
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient class                     : -20629.5513
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient duration                  : +666.5497
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient duration                  : +666.5497
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:377] �   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:18:08] [INFO] [ml_training:377] —   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:385] � ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training:385] — ============================================================
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:386] � STEP 7 � Model Evaluation
+[2026-05-17 21:18:08] [INFO] [ml_training:386] — STEP 7 — Model Evaluation
+[2026-05-17 21:18:08] [INFO] [ml_training] [test:404] � Running 5-fold cross-validation on training set �
+[2026-05-17 21:18:08] [INFO] [ml_training:404] — Running 5-fold cross-validation on training set …
+[2026-05-17 21:18:10] [INFO] [ml_training:411] — ────────────────────────────────────────────────────
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:412] �   EVALUATION METRICS (Test Set)
+[2026-05-17 21:18:10] [INFO] [ml_training:412] —   EVALUATION METRICS (Test Set)
+[2026-05-17 21:18:10] [INFO] [ml_training:413] — ────────────────────────────────────────────────────
+[2026-05-17 21:18:10] [INFO] [ml_training:414] —   MAE       : ₹4,624.99
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:415] �   MSE       : 49,200,540.29
+[2026-05-17 21:18:10] [INFO] [ml_training:415] —   MSE       : 49,200,540.29
+[2026-05-17 21:18:10] [INFO] [ml_training:416] —   RMSE      : ₹7,014.31
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:417] �   R�        :  0.904554  (train: 0.904622)
+[2026-05-17 21:18:10] [INFO] [ml_training:417] —   R²        :  0.904554  (train: 0.904622)
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:418] �   Adj. R�   :  0.904540
+[2026-05-17 21:18:10] [INFO] [ml_training:418] —   Adj. R²   :  0.904540
+[2026-05-17 21:18:10] [INFO] [ml_training:419] — ────────────────────────────────────────────────────
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:420] �   5-Fold CV R� scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:18:10] [INFO] [ml_training:420] —   5-Fold CV R² scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:421] �   CV Mean R�: 0.904608  �  0.000674
+[2026-05-17 21:18:10] [INFO] [ml_training:421] —   CV Mean R²: 0.904608  ±  0.000674
+[2026-05-17 21:18:10] [INFO] [ml_training:422] — ────────────────────────────────────────────────────
+[2026-05-17 21:18:10] [INFO] [ml_training:432] — No significant overfitting detected ✓ (gap=0.0001)
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:435] � Sample predictions (first 5 test rows):
+[2026-05-17 21:18:10] [INFO] [ml_training:435] — Sample predictions (first 5 test rows):
+[2026-05-17 21:18:10] [INFO] [ml_training:437] —   Actual: ₹7366      Predicted: ₹4586      Error: ₹-2780
+[2026-05-17 21:18:10] [INFO] [ml_training:437] —   Actual: ₹64831     Predicted: ₹52842     Error: ₹-11989
+[2026-05-17 21:18:10] [INFO] [ml_training:437] —   Actual: ₹6195      Predicted: ₹7878      Error: ₹+1683
+[2026-05-17 21:18:10] [INFO] [ml_training:437] —   Actual: ₹60160     Predicted: ₹56120     Error: ₹-4040
+[2026-05-17 21:18:10] [INFO] [ml_training:437] —   Actual: ₹6578      Predicted: ₹6663      Error: ₹+85
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:452] � ============================================================
+[2026-05-17 21:18:10] [INFO] [ml_training:452] — ============================================================
+[2026-05-17 21:18:10] [INFO] [ml_training] [test:453] � STEP 8 � Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:18:10] [INFO] [ml_training:453] — STEP 8 — Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:18:10] [INFO] [ml_training:456] — Model saved successfully (3.4 KB) ✓
+[2026-05-17 21:18:10] [INFO] [ml_training:475] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:18:10] [INFO] [ml_training:476] — ║  Training complete!                                  ║
+[2026-05-17 21:18:10] [INFO] [ml_training:477] — ║  R² = 0.9046  |  RMSE = ₹7,014.31               ║
+[2026-05-17 21:18:10] [INFO] [ml_training:479] — ║  Model saved → ml_models/flight_price_model.pkl     ║
+[2026-05-17 21:18:10] [INFO] [ml_training:480] — ║  Next: python manage.py runserver                    ║
+[2026-05-17 21:18:10] [INFO] [ml_training:481] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:18:49] [INFO] [predictor] [views:28] � Home page requested.
+[2026-05-17 21:18:49] [DEBUG] [predictor] [chart_data:35] � avg_price_by_airline: 6 airlines
+[2026-05-17 21:18:58] [INFO] [predictor] [views:28] � Home page requested.
+[2026-05-17 21:18:58] [DEBUG] [predictor] [chart_data:35] � avg_price_by_airline: 6 airlines
+[2026-05-17 21:20:24] [DEBUG] [predictor] [ml_engine:84] � predict_price called: airline=AirAsia src=Delhi dst=Hyderabad dep=Early_Morning arr=Morning stops=one class=Economy dur=2.5 days=15
+[2026-05-17 21:20:24] [INFO] [predictor] [ml_engine:37] � Loading ML pipeline from E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:20:25] [ERROR] [predictor] [views:86] � Prediction error: module '__main__' has no attribute 'MultiColumnLabelEncoder'
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\views.py", line 67, in predict
+    price = predict_price(
+        airline_name=airline.name,
+    ...<7 lines>...
+        days_left=days_left,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\ml_engine.py", line 109, in predict_price
+    pipeline = _load_pipeline()
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\ml_engine.py", line 38, in _load_pipeline
+    _pipeline = joblib.load(model_path)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1326, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1651, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1701, in find_class
+    return getattr(sys.modules[module], name)
+AttributeError: module '__main__' has no attribute 'MultiColumnLabelEncoder'
+[2026-05-17 21:21:01] [INFO] [predictor] [views:28] � Home page requested.
+[2026-05-17 21:21:01] [DEBUG] [predictor] [chart_data:35] � avg_price_by_airline: 6 airlines
+[2026-05-17 21:21:28] [DEBUG] [predictor] [ml_engine:84] � predict_price called: airline=Air_India src=Delhi dst=Kolkata dep=Evening arr=Early_Morning stops=one class=Economy dur=2.5 days=15
+[2026-05-17 21:21:28] [INFO] [predictor] [ml_engine:37] � Loading ML pipeline from E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:21:29] [ERROR] [predictor] [views:86] � Prediction error: module '__main__' has no attribute 'MultiColumnLabelEncoder'
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\views.py", line 67, in predict
+    price = predict_price(
+        airline_name=airline.name,
+    ...<7 lines>...
+        days_left=days_left,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\ml_engine.py", line 109, in predict_price
+    pipeline = _load_pipeline()
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\ml_engine.py", line 38, in _load_pipeline
+    _pipeline = joblib.load(model_path)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1326, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1651, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Dhruv Sharma\AppData\Local\Programs\Python\Python314\Lib\pickle.py", line 1701, in find_class
+    return getattr(sys.modules[module], name)
+AttributeError: module '__main__' has no attribute 'MultiColumnLabelEncoder'
+[2026-05-17 21:24:57] [INFO] [ml_training] [test:462] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:24:57] [INFO] [ml_training:462] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:24:57] [INFO] [ml_training] [test:463] — ║  Flight Price Prediction — MLR Training Script       ║
+[2026-05-17 21:24:57] [INFO] [ml_training:463] — ║  Flight Price Prediction — MLR Training Script       ║
+[2026-05-17 21:24:57] [INFO] [ml_training] [test:464] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:24:57] [INFO] [ml_training:464] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:24:57] [INFO] [ml_training] [test:170] — ============================================================
+[2026-05-17 21:24:57] [INFO] [ml_training:170] — ============================================================
+[2026-05-17 21:24:57] [INFO] [ml_training] [test:171] — STEP 1 — Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:24:57] [INFO] [ml_training:171] — STEP 1 — Loading dataset from: E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\dataset\Clean_Dataset.xlsx
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:182] — Dataset loaded: 300153 rows × 12 columns
+[2026-05-17 21:25:09] [INFO] [ml_training:182] — Dataset loaded: 300153 rows × 12 columns
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:183] — Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:183] — Columns: ['Unnamed: 0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:184] — Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:25:09] [DEBUG] [ml_training:184] — Data types:
+Unnamed: 0            int64
+airline                 str
+flight               object
+source_city             str
+departure_time          str
+stops                   str
+arrival_time            str
+destination_city        str
+class                   str
+duration            float64
+days_left             int64
+price                 int64
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:191] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:191] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:192] — STEP 2 — Preprocessing
+[2026-05-17 21:25:09] [INFO] [ml_training:192] — STEP 2 — Preprocessing
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:196] — Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:196] — Normalised column names: ['unnamed:_0', 'airline', 'flight', 'source_city', 'departure_time', 'stops', 'arrival_time', 'destination_city', 'class', 'duration', 'days_left', 'price']
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:202] — Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:25:09] [INFO] [ml_training:202] — Dropped columns: ['unnamed:_0', 'flight']
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:215] — No missing values found ✓
+[2026-05-17 21:25:09] [INFO] [ml_training:215] — No missing values found ✓
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:222] — Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:25:09] [INFO] [ml_training:222] — Numeric summary:
+            duration      days_left          price
+count  300153.000000  300153.000000  300153.000000
+mean       12.221021      26.004751   20889.660523
+std         7.191997      13.561004   22697.767366
+min         0.830000       1.000000    1105.000000
+25%         6.830000      15.000000    4783.000000
+50%        11.250000      26.000000    7425.000000
+75%        16.170000      38.000000   42521.000000
+max        49.830000      49.000000  123071.000000
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:228] — Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:25:09] [INFO] [ml_training:228] — Outliers in price (IQR method): 123 rows (0.04% of data)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:233] — Preprocessing complete. Final shape: 300153 × 10
+[2026-05-17 21:25:09] [INFO] [ml_training:233] — Preprocessing complete. Final shape: 300153 × 10
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:240] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:240] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:241] — STEP 3 — Seeding normalised database tables
+[2026-05-17 21:25:09] [INFO] [ml_training:241] — STEP 3 — Seeding normalised database tables
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:250] — Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:25:09] [INFO] [ml_training:250] — Airline: 0 new records inserted (total unique: 6)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:250] — City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:25:09] [INFO] [ml_training:250] — City: 0 new records inserted (total unique: 6)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:263] — TimeSlot: 6 records
+[2026-05-17 21:25:09] [INFO] [ml_training:263] — TimeSlot: 6 records
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:268] — StopType: 3 records
+[2026-05-17 21:25:09] [INFO] [ml_training:268] — StopType: 3 records
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:272] — FlightClass: 2 records
+[2026-05-17 21:25:09] [INFO] [ml_training:272] — FlightClass: 2 records
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:277] — FlightRecord table already has 300153 rows — skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:25:09] [INFO] [ml_training:277] — FlightRecord table already has 300153 rows — skipping bulk insert. (Delete the DB to re-seed.)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:325] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:325] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:326] — STEP 4 — Building feature matrix
+[2026-05-17 21:25:09] [INFO] [ml_training:326] — STEP 4 — Building feature matrix
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:332] — Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:25:09] [INFO] [ml_training:332] — Feature columns: ['airline', 'source_city', 'destination_city', 'departure_time', 'arrival_time', 'stops', 'class', 'duration', 'days_left']
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:333] — X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:25:09] [INFO] [ml_training:333] — X shape: (300153, 9) | y shape: (300153,)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:334] — Target (price) — min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:25:09] [INFO] [ml_training:334] — Target (price) — min: 1105  max: 123071  mean: 20889.66  std: 22697.73
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:343] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:343] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:344] — STEP 5 — Train/Test Split (80% train / 20% test)
+[2026-05-17 21:25:09] [INFO] [ml_training:344] — STEP 5 — Train/Test Split (80% train / 20% test)
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:350] — Train size: 240122  Test size: 60031
+[2026-05-17 21:25:09] [INFO] [ml_training:350] — Train size: 240122  Test size: 60031
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:357] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:357] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:358] — STEP 6 — Training Multiple Linear Regression Pipeline
+[2026-05-17 21:25:09] [INFO] [ml_training:358] — STEP 6 — Training Multiple Linear Regression Pipeline
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:359] — Pipeline: MultiColumnLabelEncoder → StandardScaler → LinearRegression
+[2026-05-17 21:25:09] [INFO] [ml_training:359] — Pipeline: MultiColumnLabelEncoder → StandardScaler → LinearRegression
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'airline': classes = ['AirAsia', 'Air_India', 'GO_FIRST', 'Indigo', 'SpiceJet', 'Vistara']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'source_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'destination_city': classes = ['Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'departure_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'arrival_time': classes = ['Afternoon', 'Early_Morning', 'Evening', 'Late_Night', 'Morning', 'Night']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'stops': classes = ['one', 'two_or_more', 'zero']
+[2026-05-17 21:25:09] [DEBUG] [ml_training] [test:152] — LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:25:09] [DEBUG] [ml_training:152] — LabelEncoder fitted for 'class': classes = ['Business', 'Economy']
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:375] — Intercept: 20888.5724
+[2026-05-17 21:25:09] [INFO] [ml_training:375] — Intercept: 20888.5724
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient airline                   : +1745.4138
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient airline                   : +1745.4138
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient source_city               : +182.9751
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient source_city               : +182.9751
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient destination_city          : +211.9929
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient destination_city          : +211.9929
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient departure_time            : +62.3972
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient departure_time            : +62.3972
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient arrival_time              : +325.7422
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient stops                     : -2187.9379
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient stops                     : -2187.9379
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient class                     : -20629.5513
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient class                     : -20629.5513
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient duration                  : +666.5497
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient duration                  : +666.5497
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:377] —   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:25:09] [INFO] [ml_training:377] —   Coefficient days_left                 : -1780.5593
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:385] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training:385] — ============================================================
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:386] — STEP 7 — Model Evaluation
+[2026-05-17 21:25:09] [INFO] [ml_training:386] — STEP 7 — Model Evaluation
+[2026-05-17 21:25:09] [INFO] [ml_training] [test:404] — Running 5-fold cross-validation on training set …
+[2026-05-17 21:25:09] [INFO] [ml_training:404] — Running 5-fold cross-validation on training set …
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:411] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training:411] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:412] —   EVALUATION METRICS (Test Set)
+[2026-05-17 21:25:11] [INFO] [ml_training:412] —   EVALUATION METRICS (Test Set)
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:413] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training:413] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:414] —   MAE       : ₹4,624.99
+[2026-05-17 21:25:11] [INFO] [ml_training:414] —   MAE       : ₹4,624.99
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:415] —   MSE       : 49,200,540.29
+[2026-05-17 21:25:11] [INFO] [ml_training:415] —   MSE       : 49,200,540.29
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:416] —   RMSE      : ₹7,014.31
+[2026-05-17 21:25:11] [INFO] [ml_training:416] —   RMSE      : ₹7,014.31
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:417] —   R²        :  0.904554  (train: 0.904622)
+[2026-05-17 21:25:11] [INFO] [ml_training:417] —   R²        :  0.904554  (train: 0.904622)
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:418] —   Adj. R²   :  0.904540
+[2026-05-17 21:25:11] [INFO] [ml_training:418] —   Adj. R²   :  0.904540
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:419] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training:419] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:420] —   5-Fold CV R² scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:25:11] [INFO] [ml_training:420] —   5-Fold CV R² scores: ['0.9055', '0.9052', '0.9036', '0.9043', '0.9045']
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:421] —   CV Mean R²: 0.904608  ±  0.000674
+[2026-05-17 21:25:11] [INFO] [ml_training:421] —   CV Mean R²: 0.904608  ±  0.000674
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:422] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training:422] — ────────────────────────────────────────────────────
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:432] — No significant overfitting detected ✓ (gap=0.0001)
+[2026-05-17 21:25:11] [INFO] [ml_training:432] — No significant overfitting detected ✓ (gap=0.0001)
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:435] — Sample predictions (first 5 test rows):
+[2026-05-17 21:25:11] [INFO] [ml_training:435] — Sample predictions (first 5 test rows):
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:437] —   Actual: ₹7366      Predicted: ₹4586      Error: ₹-2780
+[2026-05-17 21:25:11] [INFO] [ml_training:437] —   Actual: ₹7366      Predicted: ₹4586      Error: ₹-2780
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:437] —   Actual: ₹64831     Predicted: ₹52842     Error: ₹-11989
+[2026-05-17 21:25:11] [INFO] [ml_training:437] —   Actual: ₹64831     Predicted: ₹52842     Error: ₹-11989
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:437] —   Actual: ₹6195      Predicted: ₹7878      Error: ₹+1683
+[2026-05-17 21:25:11] [INFO] [ml_training:437] —   Actual: ₹6195      Predicted: ₹7878      Error: ₹+1683
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:437] —   Actual: ₹60160     Predicted: ₹56120     Error: ₹-4040
+[2026-05-17 21:25:11] [INFO] [ml_training:437] —   Actual: ₹60160     Predicted: ₹56120     Error: ₹-4040
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:437] —   Actual: ₹6578      Predicted: ₹6663      Error: ₹+85
+[2026-05-17 21:25:11] [INFO] [ml_training:437] —   Actual: ₹6578      Predicted: ₹6663      Error: ₹+85
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:452] — ============================================================
+[2026-05-17 21:25:11] [INFO] [ml_training:452] — ============================================================
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:453] — STEP 8 — Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:25:11] [INFO] [ml_training:453] — STEP 8 — Saving Pipeline to E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:456] — Model saved successfully (3.4 KB) ✓
+[2026-05-17 21:25:11] [INFO] [ml_training:456] — Model saved successfully (3.4 KB) ✓
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:475] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:25:11] [INFO] [ml_training:475] — ╔══════════════════════════════════════════════════════╗
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:476] — ║  Training complete!                                  ║
+[2026-05-17 21:25:11] [INFO] [ml_training:476] — ║  Training complete!                                  ║
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:477] — ║  R² = 0.9046  |  RMSE = ₹7,014.31               ║
+[2026-05-17 21:25:11] [INFO] [ml_training:477] — ║  R² = 0.9046  |  RMSE = ₹7,014.31               ║
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:479] — ║  Model saved → ml_models/flight_price_model.pkl     ║
+[2026-05-17 21:25:11] [INFO] [ml_training:479] — ║  Model saved → ml_models/flight_price_model.pkl     ║
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:480] — ║  Next: python manage.py runserver                    ║
+[2026-05-17 21:25:11] [INFO] [ml_training:480] — ║  Next: python manage.py runserver                    ║
+[2026-05-17 21:25:11] [INFO] [ml_training] [test:481] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:25:11] [INFO] [ml_training:481] — ╚══════════════════════════════════════════════════════╝
+[2026-05-17 21:25:35] [INFO] [predictor] [views:28] — Home page requested.
+[2026-05-17 21:25:35] [DEBUG] [predictor] [chart_data:35] — avg_price_by_airline: 6 airlines
+[2026-05-17 21:25:50] [DEBUG] [predictor] [forms:105] — Form cleaned successfully: Delhi → Kolkata
+[2026-05-17 21:25:50] [INFO] [predictor] [views:61] — Prediction request: Air_India | Delhi → Kolkata | Economy | dur=2.5 | days=15
+[2026-05-17 21:25:50] [DEBUG] [predictor] [ml_engine:93] — predict_price called: airline=Air_India src=Delhi dst=Kolkata dep=Morning arr=Evening stops=one class=Economy dur=2.5 days=15
+[2026-05-17 21:25:50] [INFO] [predictor] [ml_engine:46] — Loading ML pipeline from E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:25:50] [INFO] [predictor] [ml_engine:48] — ML pipeline loaded successfully.
+[2026-05-17 21:25:50] [ERROR] [predictor] [views:86] — Prediction error: y contains previously unseen labels: '0.0'
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\utils\_encode.py", line 229, in _encode
+    return _map_to_integer(values, uniques)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\utils\_encode.py", line 168, in _map_to_integer
+    return xp.asarray([table[v] for v in values], device=device(values))
+                       ~~~~~^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\utils\_encode.py", line 161, in __missing__
+    raise KeyError(key)
+KeyError: '0.0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\views.py", line 67, in predict
+    price = predict_price(
+        airline_name=airline.name,
+    ...<7 lines>...
+        days_left=days_left,
+    )
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\ml_engine.py", line 119, in predict_price
+    prediction = pipeline.predict(features)[0]
+                 ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\pipeline.py", line 745, in predict
+    Xt = transform.transform(Xt)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\predictor\transformers.py", line 43, in transform
+    df[col] = self.encoders_[col].transform(df[col].astype(str))
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\preprocessing\_label.py", line 144, in transform
+    return _encode(y, uniques=self.classes_)
+  File "E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\envCustomAdmin\Lib\site-packages\sklearn\utils\_encode.py", line 231, in _encode
+    raise ValueError(f"y contains previously unseen labels: {e}")
+ValueError: y contains previously unseen labels: '0.0'
+[2026-05-17 21:33:15] [DEBUG] [predictor] [forms:105] — Form cleaned successfully: Delhi → Kolkata
+[2026-05-17 21:33:15] [INFO] [predictor] [views:61] — Prediction request: Air_India | Delhi → Kolkata | Economy | dur=2.5 | days=15
+[2026-05-17 21:33:15] [DEBUG] [predictor] [ml_engine:79] — predict_price called: airline=Air_India src=Delhi dst=Kolkata dep=Morning arr=Evening stops=one class=Economy dur=2.5 days=15
+[2026-05-17 21:33:15] [INFO] [predictor] [ml_engine:52] — Loading ML pipeline from E:\Dhruv Work Files\StudyWork\DjangoDB&Cache\Project4MLR&CustomDjangoAdminJazmin\MLR_Flight_Price\ml_models\flight_price_model.pkl
+[2026-05-17 21:33:15] [INFO] [predictor] [ml_engine:54] — ML pipeline loaded successfully.
+[2026-05-17 21:33:15] [INFO] [predictor] [ml_engine:107] — Prediction result: ₹6455.43  (airline=Air_India, Delhi→Kolkata, class=Economy, dur=2.5h, days=15)
+[2026-05-17 21:33:15] [INFO] [predictor] [views:104] — PredictionLog #1 saved: ₹6455.43
+[2026-05-17 21:33:15] [INFO] [predictor] [views:128] — Result page for PredictionLog #1
+[2026-05-17 21:33:48] [DEBUG] [predictor] [forms:105] — Form cleaned successfully: Hyderabad → Delhi
+[2026-05-17 21:33:48] [INFO] [predictor] [views:61] — Prediction request: GO_FIRST | Hyderabad → Delhi | Economy | dur=2.5 | days=15
+[2026-05-17 21:33:48] [DEBUG] [predictor] [ml_engine:79] — predict_price called: airline=GO_FIRST src=Hyderabad dst=Delhi dep=Night arr=Morning stops=zero class=Economy dur=2.5 days=15
+[2026-05-17 21:33:48] [INFO] [predictor] [ml_engine:107] — Prediction result: ₹1114.65  (airline=GO_FIRST, Hyderabad→Delhi, class=Economy, dur=2.5h, days=15)
+[2026-05-17 21:33:48] [INFO] [predictor] [views:104] — PredictionLog #2 saved: ₹1114.65
+[2026-05-17 21:33:48] [INFO] [predictor] [views:128] — Result page for PredictionLog #2
+[2026-05-17 21:35:01] [INFO] [predictor] [views:28] — Home page requested.
+[2026-05-17 21:35:02] [DEBUG] [predictor] [chart_data:35] — avg_price_by_airline: 6 airlines
+[2026-05-17 21:35:02] [INFO] [predictor] [views:153] — Dashboard requested.
+[2026-05-17 21:35:02] [DEBUG] [predictor] [chart_data:35] — avg_price_by_airline: 6 airlines
+[2026-05-17 21:35:03] [DEBUG] [predictor] [chart_data:67] — price_vs_duration_sample: 300 points
+[2026-05-17 21:35:04] [INFO] [predictor] [views:28] — Home page requested.
+[2026-05-17 21:35:05] [DEBUG] [predictor] [chart_data:35] — avg_price_by_airline: 6 airlines
+[2026-05-17 21:35:06] [INFO] [predictor] [views:153] — Dashboard requested.
+[2026-05-17 21:35:06] [DEBUG] [predictor] [chart_data:35] — avg_price_by_airline: 6 airlines
+[2026-05-17 21:35:06] [DEBUG] [predictor] [chart_data:67] — price_vs_duration_sample: 300 points
