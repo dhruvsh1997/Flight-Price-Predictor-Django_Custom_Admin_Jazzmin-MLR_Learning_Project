@@ -1,6 +1,6 @@
 # ✈ Flight Price Predictor — Django + MLR Learning Project
 
-> **A full-stack Django application** that uses **Multiple Linear Regression** to predict Indian domestic flight prices, featuring a rich analytics UI, normalised database, Jazzmin-powered admin panel, and complete logging.
+> **A full-stack Django application** that uses **Multiple Linear Regression** to predict Indian domestic flight prices, featuring a rich analytics UI, normalised database, Jazzmin-powered admin panel, and complete loggings.
 
 ---
 
